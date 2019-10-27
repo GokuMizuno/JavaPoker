@@ -105,14 +105,17 @@ public class Hand
 		{
 				 if (ranks[x] > sameCards)
 				 {
-					 if (sameCards != 1)  //if sameCards was not the default value
-					 {
+					if (sameCards != 1)  //if sameCards was not the default value
+					{
+						largeGroupRank = x;
+					}
+					else
+					{
 						 sameCards2 = sameCards;
-						 smallGroupRank = largeGroupRank;
-					 }
+						 smallGroupRank = x;
+					}
 
 					 sameCards = ranks[x];
-					 largeGroupRank = x;
 
 				 } else if (ranks[x] > sameCards2)
 				 {
